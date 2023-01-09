@@ -42,8 +42,9 @@ const HeroPage = ()=>{
         const RecipeData  = async()=>{
               try{
               const Result = await axios.get(`${process.env.REACT_APP_BACKENDURL}/getAllPost`)
-              setShowRecipe(Result.data.Result)
-              setStoreAllRecipeData(Result.data.Result)
+              const ReverseResult = Result.data.Result.reverse()
+              setShowRecipe(ReverseResult)
+              setStoreAllRecipeData(ReverseResult)
               }
               catch(error){
                 console.log(error)

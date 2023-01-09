@@ -28,7 +28,7 @@ import {Link} from "react-router-dom"
         component="img"
         alt="green iguana"
         height="140"
-        image={recipedata.img}
+        image={recipedata?.img}
       />
       <CardContent style={{paddingBottom:"0px"}}>
         <Box style={{display:"flex",flexDirection:"row",}}>

@@ -30,10 +30,10 @@ function CreateRecipe() {
   const tokendata = useDecode();
   const Navigator = useNavigate();
    
-  console.log(tokendata)
+  
   useEffect(()=>{
       if(image){
-      const imageRef = ref(storage,"image");
+      const imageRef = ref(storage,`image/${image.name}`);
       uploadBytes(imageRef,image).then(()=>{
         getDownloadURL(imageRef).then((url)=>{
              setUploadedImage(url)
